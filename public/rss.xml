@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Ryan James V. Capadocia - Portfolio &amp; Projects</title>
+    <link>https://unknownplanet40.github.io/rj-portfolio</link>
+    <description>Recent projects and software updates by Ryan James V. Capadocia - IT Support Engineer &amp; Software Developer</description>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 08 Sep 2026 00:00:00 GMT</lastBuildDate>
+
+    <item>
+      <title>CapsStream — Self-Hosted Cinematic Personal Media Server</title>
+      <link>https://unknownplanet40.github.io/rj-portfolio/#projects</link>
+      <description>A modern, self-hosted cinematic personal media server for movies, TV shows, and anime. Automatically matches titles against TMDb for rich metadata and streams through a hardware-accelerated web player. Runs directly from an external hard drive with no cloud service required.</description>
+      <pubDate>Mon, 15 Dec 2025 00:00:00 GMT</pubDate>
+    </item>
+
+    <item>
+      <title>ID Generator — C# .NET Desktop Application</title>
+      <link>https://unknownplanet40.github.io/rj-portfolio/#projects</link>
+      <description>A Windows desktop application built with C# and Windows Forms for generating, customizing, and printing school or organization ID cards with photo and template support.</description>
+      <pubDate>Thu, 20 Nov 2025 00:00:00 GMT</pubDate>
+    </item>
+
+    <item>
+      <title>Internship Management System (OJT System)</title>
+      <link>https://unknownplanet40.github.io/rj-portfolio/#projects</link>
+      <description>A web-based platform built with PHP and MySQL for coordinating student internship placements, tracking hours, evaluating performance, and managing host company documents.</description>
+      <pubDate>Sat, 10 May 2025 00:00:00 GMT</pubDate>
+    </item>
+
+    <item>
+      <title>POS &amp; Inventory Management System</title>
+      <link>https://unknownplanet40.github.io/rj-portfolio/#projects</link>
+      <description>A complete point-of-sale and retail inventory tracking system featuring transaction receipts, low-stock alerts, sales analytics, and automated reporting.</description>
+      <pubDate>Mon, 17 Feb 2025 00:00:00 GMT</pubDate>
+    </item>
+
+    <item>
+      <title>Blood Bank Management System</title>
+      <link>https://unknownplanet40.github.io/rj-portfolio/#projects</link>
+      <description>A healthcare database system to organize voluntary blood donor registries, monitor blood type reserves, and streamline donation appointment scheduling.</description>
+      <pubDate>Wed, 11 Dec 2024 00:00:00 GMT</pubDate>
+    </item>
+
+    <item>
+      <title>CSG Student Governance System</title>
+      <link>https://unknownplanet40.github.io/rj-portfolio/#projects</link>
+      <description>A digital governance and records management system for university student councils, officer directories, election records, and student body announcements.</description>
+      <pubDate>Thu, 15 Aug 2024 00:00:00 GMT</pubDate>
+    </item>
+  </channel>
+</rss>

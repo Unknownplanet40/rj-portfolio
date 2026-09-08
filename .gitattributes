@@ -1,0 +1,23 @@
+# Normalize line endings so CI-executed files (bash/python inside
+# .github/workflows) never end up with CRLF, which can break shell
+# parsing on Ubuntu runners.
+* text=auto eol=lf
+
+*.yml text eol=lf
+*.yaml text eol=lf
+*.sh text eol=lf
+*.md text eol=lf
+*.py text eol=lf
+*.json text eol=lf
+
+# Binary files — never touch line endings
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.ico binary
+*.pdf binary
+*.mp4 binary
+*.zip binary
+*.apk binary

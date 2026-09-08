@@ -1,0 +1,32 @@
+{
+  "name": "Ryan James V. Capadocia — Portfolio",
+  "short_name": "RJ Portfolio",
+  "description": "Personal portfolio of Ryan James V. Capadocia — IT Support Engineer, Software Developer, and Problem Solver.",
+  "start_url": "./",
+  "id": "./",
+  "display": "standalone",
+  "background_color": "#0a0c10",
+  "theme_color": "#2563eb",
+  "orientation": "portrait-primary",
+  "categories": ["portfolio", "technology", "development"],
+  "icons": [
+    {
+      "src": "./icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icons/icon-maskable-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
