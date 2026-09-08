@@ -2,7 +2,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "next-themes";
-import { Analytics } from "@vercel/analytics/react";
+import { Analytics } from "@vercel/analytics/next";
 import { ReadingProgress } from "@/components/ui/ReadingProgress";
 import { LoadingScreen } from "@/components/layout/LoadingScreen";
 import { PwaRegister } from "@/components/pwa/PwaRegister";
