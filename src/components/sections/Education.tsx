@@ -6,6 +6,8 @@ import { ScrollAnimation } from "@/components/ui/ScrollAnimation";
 import { SectionLabel, SectionHeading, Card } from "@/components/ui/Card";
 import { EDUCATION } from "@/data/portfolio";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 export function Education() {
   return (
     <section id="education" className="section bg-[var(--color-bg-secondary)]" aria-labelledby="education-heading">
@@ -22,7 +24,7 @@ export function Education() {
                 <div className="shrink-0 w-16 h-16 rounded-[var(--radius-xl)] bg-white flex items-center justify-center overflow-hidden border border-[var(--color-border)] shadow-sm">
                   {edu.logo ? (
                     <Image
-                      src={edu.logo}
+                      src={`${basePath}${edu.logo}`}
                       alt={`${edu.school} logo`}
                       width={64}
                       height={64}
