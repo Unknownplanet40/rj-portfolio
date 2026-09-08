@@ -206,6 +206,38 @@ export const PROJECTS: Project[] = [
     github: "https://github.com/Unknownplanet40/CapsStream",
     demo: undefined,
     featured: true,
+    previews: [
+      {
+        title: "Home Dashboard",
+        src: "/projects/capsstream/home.webp",
+        alt: "CapsStream Home Page Dashboard with media collections and hero banner",
+      },
+      {
+        title: "Movie Catalog",
+        src: "/projects/capsstream/movies.webp",
+        alt: "CapsStream Movie Catalog browsing and filtering",
+      },
+      {
+        title: "Details & Episodes",
+        src: "/projects/capsstream/details.webp",
+        alt: "CapsStream TMDb rich metadata details and episode picker",
+      },
+      {
+        title: "Video Player",
+        src: "/projects/capsstream/player.webp",
+        alt: "CapsStream hardware-accelerated video player with resume playback",
+      },
+      {
+        title: "Achievements",
+        src: "/projects/capsstream/achievements.webp",
+        alt: "CapsStream gamified achievements and trophies system",
+      },
+      {
+        title: "Watch Stats",
+        src: "/projects/capsstream/stats.webp",
+        alt: "CapsStream viewing statistics and watch time analytics",
+      },
+    ],
   },
   {
     id: "ojt-system",

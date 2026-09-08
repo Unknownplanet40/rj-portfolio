@@ -20,6 +20,7 @@ import { Tag } from "@/components/ui/Badge";
 import { LinkButton } from "@/components/ui/Button";
 import { PROJECTS } from "@/data/portfolio";
 import { cn } from "@/lib/utils";
+import { CapsStreamGallery } from "@/components/sections/CapsStreamGallery";
 
 export function Projects() {
   const featured = PROJECTS.find((p) => p.featured);
@@ -46,7 +47,7 @@ export function Projects() {
               className={cn(
                 "relative rounded-[var(--radius-2xl)] border border-[var(--color-border)]",
                 "bg-[var(--color-surface)] overflow-hidden",
-                "p-6 md:p-10 shadow-[var(--shadow-md)]",
+                "p-5 sm:p-6 md:p-10 shadow-[var(--shadow-md)]",
                 "card-hover group"
               )}
               aria-label={`Featured project: ${featured.title}`}
@@ -59,9 +60,9 @@ export function Projects() {
                 </span>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-8 items-start">
+              <div className="grid md:grid-cols-2 gap-6 md:gap-8 items-start">
                 {/* Left: info */}
-                <div className="flex flex-col gap-5">
+                <div className="flex flex-col gap-5 pr-16 md:pr-0">
                   <div className="flex items-center gap-3">
                     <div className="w-11 h-11 rounded-[var(--radius-xl)] bg-[var(--color-accent-subtle)] flex items-center justify-center text-[var(--color-accent)]">
                       <Zap size={20} />
@@ -115,29 +116,33 @@ export function Projects() {
                   </div>
                 </div>
 
-                {/* Right: highlights */}
-                {featured.highlights && (
-                  <div className="flex flex-col gap-3">
-                    <p className="text-xs font-semibold uppercase tracking-widest text-[var(--color-text-muted)]">
-                      Key Features
-                    </p>
-                    <div className="flex flex-wrap gap-2">
-                      {featured.highlights.map((h) => (
-                        <span
-                          key={h}
-                          className={cn(
-                            "px-3 py-1.5 rounded-[var(--radius-lg)] text-xs font-medium",
-                            "border border-[var(--color-border)]",
-                            "bg-[var(--color-bg-secondary)] text-[var(--color-text-secondary)]"
-                          )}
-                        >
-                          {h}
-                        </span>
-                      ))}
+                {/* Right: gallery + key features */}
+                <div className="flex flex-col gap-4">
+                  {featured.previews && featured.previews.length > 0 && (
+                    <CapsStreamGallery previews={featured.previews} />
+                  )}
+                  {featured.highlights && (
+                    <div className="flex flex-col gap-2">
+                      <p className="text-xs font-semibold uppercase tracking-widest text-[var(--color-text-muted)]">
+                        Key Features
+                      </p>
+                      <div className="flex flex-wrap gap-2">
+                        {featured.highlights.map((h) => (
+                          <span
+                            key={h}
+                            className={cn(
+                              "px-3 py-1.5 rounded-[var(--radius-lg)] text-xs font-medium",
+                              "border border-[var(--color-border)]",
+                              "bg-[var(--color-bg-secondary)] text-[var(--color-text-secondary)]"
+                            )}
+                          >
+                            {h}
+                          </span>
+                        ))}
+                      </div>
                     </div>
-
-                  </div>
-                )}
+                  )}
+                </div>
               </div>
 
               {/* System Architecture Flow Container */}
@@ -155,7 +160,7 @@ export function Projects() {
                   </span>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5">
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
                   {/* Stage 1: Client */}
                   <div className="p-4 rounded-[var(--radius-xl)] bg-[var(--color-bg-secondary)] border border-[var(--color-border)] flex flex-col gap-2 relative group/card hover:border-[var(--color-accent)]/50 transition-all">
                     <div className="flex items-center justify-between">

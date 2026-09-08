@@ -14,6 +14,12 @@ export interface Certification {
   url?: string;
 }
 
+export interface ProjectPreview {
+  title: string;
+  src: string;
+  alt: string;
+}
+
 export interface Project {
   id: string;
   title: string;
@@ -23,6 +29,7 @@ export interface Project {
   github?: string;
   demo?: string;
   featured?: boolean;
+  previews?: ProjectPreview[];
 }
 
 export interface Experience {
