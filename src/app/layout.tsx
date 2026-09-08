@@ -82,7 +82,21 @@ export const metadata: Metadata = {
     googleBot: { index: true, follow: true },
   },
   icons: {
-    icon: `${basePath}/favicon.ico`,
+    icon: [
+      {
+        url: `${basePath}/logo/logo-transparent_dark.png`,
+        media: "(prefers-color-scheme: light)",
+        type: "image/png",
+      },
+      {
+        url: `${basePath}/logo/logo-transparent_light.png`,
+        media: "(prefers-color-scheme: dark)",
+        type: "image/png",
+      },
+      {
+        url: `${basePath}/favicon.ico`,
+      },
+    ],
     apple: `${basePath}/icons/icon-192x192.png`,
   },
   manifest: `${basePath}/manifest.webmanifest`,
@@ -149,6 +163,23 @@ export default function RootLayout({
           as="image"
           href={`${basePath}/logo/logo-transparent_light.png`}
           // shown in dark mode
+        />
+        {/* Favicon transparent icons with color-scheme support */}
+        <link
+          rel="icon"
+          href={`${basePath}/logo/logo-transparent_dark.png`}
+          media="(prefers-color-scheme: light)"
+          type="image/png"
+        />
+        <link
+          rel="icon"
+          href={`${basePath}/logo/logo-transparent_light.png`}
+          media="(prefers-color-scheme: dark)"
+          type="image/png"
+        />
+        <link
+          rel="alternate icon"
+          href={`${basePath}/favicon.ico`}
         />
         {/* Preconnect to Google Fonts */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
