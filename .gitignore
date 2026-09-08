@@ -46,3 +46,4 @@ docs/template.*.md
 # Agent & IDE customizations
 .agent
 .agents/
+docs/token-usage.md
