@@ -88,7 +88,7 @@ Refer to [ARCHITECTURE.md](./ARCHITECTURE.md) for detailed architecture document
 **Ryan James V. Capadocia**
 - GitHub: [@unknownplanet40](https://github.com/unknownplanet40)
 - LinkedIn: [linkedin.com/in/rj45](https://linkedin.com/in/rj45/)
-- Location: Laguna, Philippines
+- Location: Imus city Cavite, Philippines
 
 ---
 
