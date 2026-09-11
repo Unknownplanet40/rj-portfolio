@@ -53,16 +53,23 @@ jobs:
           commits = [c for c in log.split("\x1e") if c.strip()]
 
           type_map = {"feat": "Added", "fix": "Fixed", "perf": "Performance", "revert": "Removed"}
-          sections = {k: [] for k in ["Added", "Changed", "Fixed", "Removed", "Performance", "Security", "Breaking Changes"]}
+          categories = ["Added", "Changed", "Fixed", "Removed", "Performance", "Security", "Breaking Changes"]
+          sections = {k: [] for k in categories}
+          canon = {k.lower(): k for k in categories}
+
           conv_re = re.compile(r'^(?P<type>\w+)(\((?P<scope>[^)]+)\))?(?P<breaking>!)?:\s*(?P<desc>.+)$')
+          heading_re = re.compile(r'^\s{0,3}#{1,4}\s*(Summary|Added|Changed|Fixed|Removed|Performance|Security|Breaking Changes)\s*$', re.IGNORECASE)
+          bullet_re = re.compile(r'^\s*[-*]\s+(.*\S)\s*$')
 
           bump = "none"
           for c in commits:
               parts = c.split("\x1f")
               if len(parts) < 2:
                   continue
-              sha, subject = parts[0][:7], parts[1]
+              sha = parts[0].strip()[:7]
+              subject = parts[1].strip()
               body = parts[2] if len(parts) > 2 else ""
+
               m = conv_re.match(subject)
               is_breaking = bool(m and m.group("breaking")) or "BREAKING CHANGE" in body
 
@@ -72,6 +79,25 @@ jobs:
                   bump = "minor"
               elif bump not in ("major", "minor") and m and m.group("type") == "fix":
                   bump = "patch"
+
+              # Prefer structured ## Added / ## Fixed / etc. sections straight
+              # from the commit body (Step 4's changelog-style format) over
+              # collapsing everything into one generic subject-line bullet.
+              structured = {k: [] for k in categories}
+              current = None
+              for raw_line in body.splitlines():
+                  h = heading_re.match(raw_line)
+                  if h:
+                      current = canon.get(h.group(1).lower())  # None for "Summary"
+                      continue
+                  b = bullet_re.match(raw_line)
+                  if b and current:
+                      structured[current].append(f"- {b.group(1)} ({sha})")
+
+              if any(structured[k] for k in categories):
+                  for k in categories:
+                      sections[k].extend(structured[k])
+                  continue
 
               if not m:
                   continue
@@ -85,7 +111,7 @@ jobs:
                   sections[type_map.get(m.group("type"), "Changed")].append(entry)
 
           lines = []
-          for name in ["Added", "Changed", "Fixed", "Removed", "Performance", "Security", "Breaking Changes"]:
+          for name in categories:
               if sections[name]:
                   lines.append(f"### {name}")
                   lines.extend(sections[name])

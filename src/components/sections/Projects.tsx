@@ -42,39 +42,37 @@ export function Projects() {
 
         {/* Featured Project */}
         {featured && (
-          <ScrollAnimation className="mb-14">
+          <ScrollAnimation className="mb-14 w-full min-w-0">
             <article
               className={cn(
-                "relative rounded-[var(--radius-2xl)] border border-[var(--color-border)]",
+                "w-full rounded-[var(--radius-2xl)] border border-[var(--color-border)]",
                 "bg-[var(--color-surface)] overflow-hidden",
                 "p-5 sm:p-6 md:p-10 shadow-[var(--shadow-md)]",
                 "card-hover group"
               )}
               aria-label={`Featured project: ${featured.title}`}
             >
-              {/* Featured badge */}
-              <div className="absolute top-5 right-5">
-                <span className="flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-[var(--color-accent)] text-white">
-                  <Star size={11} fill="currentColor" />
-                  Featured
-                </span>
-              </div>
-
-              <div className="grid md:grid-cols-2 gap-6 md:gap-8 items-start">
+              <div className="grid md:grid-cols-2 gap-6 md:gap-8 items-start w-full min-w-0">
                 {/* Left: info */}
-                <div className="flex flex-col gap-5 pr-16 md:pr-0">
-                  <div className="flex items-center gap-3">
-                    <div className="w-11 h-11 rounded-[var(--radius-xl)] bg-[var(--color-accent-subtle)] flex items-center justify-center text-[var(--color-accent)]">
+                <div className="flex flex-col gap-5 min-w-0">
+                  {/* Title row + inline Featured badge */}
+                  <div className="flex items-start gap-3">
+                    <div className="w-11 h-11 shrink-0 rounded-[var(--radius-xl)] bg-[var(--color-accent-subtle)] flex items-center justify-center text-[var(--color-accent)]">
                       <Zap size={20} />
                     </div>
-                    <div>
-                      <h3 className="text-2xl font-bold text-[var(--color-text)]">
+                    <div className="flex flex-col gap-1.5 min-w-0">
+                      <h3 className="text-xl sm:text-2xl font-bold text-[var(--color-text)] leading-tight break-words">
                         {featured.title}
                       </h3>
+                      {/* Featured badge — inline, never overlaps */}
+                      <span className="inline-flex items-center gap-1.5 self-start px-2.5 py-1 rounded-full text-xs font-semibold bg-[var(--color-accent)] text-white">
+                        <Star size={11} fill="currentColor" />
+                        Featured
+                      </span>
                     </div>
                   </div>
 
-                  <p className="text-[var(--color-text-secondary)] leading-relaxed">
+                  <p className="text-[var(--color-text-secondary)] leading-relaxed break-words min-w-0 w-full">
                     {featured.description}
                   </p>
 
@@ -151,7 +149,7 @@ export function Projects() {
                   <div className="flex items-center gap-2">
                     <div className="w-2 h-2 rounded-full bg-[var(--color-accent)] animate-pulse" />
                     <span className="text-xs font-bold uppercase tracking-wider text-[var(--color-text-muted)]">
-                      System Architecture & Data Flow
+                      System Architecture &amp; Data Flow
                     </span>
                   </div>
                   <span className="inline-flex items-center gap-1.5 text-xs font-medium text-[var(--color-success)] bg-[var(--color-success-subtle)] px-2.5 py-0.5 rounded-full border border-[var(--color-success)]/20 w-fit">
@@ -160,7 +158,8 @@ export function Projects() {
                   </span>
                 </div>
 
-                <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
+                {/* 1-col mobile → 2-col sm → 4-col lg */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
                   {/* Stage 1: Client */}
                   <div className="p-4 rounded-[var(--radius-xl)] bg-[var(--color-bg-secondary)] border border-[var(--color-border)] flex flex-col gap-2 relative group/card hover:border-[var(--color-accent)]/50 transition-all">
                     <div className="flex items-center justify-between">
@@ -173,7 +172,7 @@ export function Projects() {
                     </div>
                     <div>
                       <h4 className="text-sm font-semibold text-[var(--color-text)]">Vue 3 + Pinia</h4>
-                      <p className="text-xs text-[var(--color-text-muted)]">Web Player & Android TV</p>
+                      <p className="text-xs text-[var(--color-text-muted)]">Web Player &amp; Android TV</p>
                     </div>
                     <div className="flex flex-wrap gap-1 mt-auto pt-2">
                       <span className="text-[10px] px-2 py-0.5 rounded-md bg-[var(--color-surface)] text-[var(--color-text-secondary)] border border-[var(--color-border)]">HLS Player</span>
@@ -193,7 +192,7 @@ export function Projects() {
                     </div>
                     <div>
                       <h4 className="text-sm font-semibold text-[var(--color-text)]">Python API</h4>
-                      <p className="text-xs text-[var(--color-text-muted)]">Media Scanner & Endpoints</p>
+                      <p className="text-xs text-[var(--color-text-muted)]">Media Scanner &amp; Endpoints</p>
                     </div>
                     <div className="flex flex-wrap gap-1 mt-auto pt-2">
                       <span className="text-[10px] px-2 py-0.5 rounded-md bg-[var(--color-surface)] text-[var(--color-text-secondary)] border border-[var(--color-border)]">Folder Watcher</span>
@@ -228,15 +227,15 @@ export function Projects() {
                         <Database size={16} />
                       </div>
                       <span className="text-[10px] font-mono font-semibold px-2 py-0.5 rounded bg-[var(--color-surface)] border border-[var(--color-border)] text-[var(--color-text-muted)]">
-                        DATA & API
+                        DATA &amp; API
                       </span>
                     </div>
                     <div>
-                      <h4 className="text-sm font-semibold text-[var(--color-text)]">SQLite & TMDb</h4>
-                      <p className="text-xs text-[var(--color-text-muted)]">Metadata & Poster Cache</p>
+                      <h4 className="text-sm font-semibold text-[var(--color-text)]">SQLite &amp; TMDb</h4>
+                      <p className="text-xs text-[var(--color-text-muted)]">Metadata &amp; Poster Cache</p>
                     </div>
                     <div className="flex flex-wrap gap-1 mt-auto pt-2">
-                      <span className="text-[10px] px-2 py-0.5 rounded-md bg-[var(--color-surface)] text-[var(--color-text-secondary)] border border-[var(--color-border)]">Episodes & Cast</span>
+                      <span className="text-[10px] px-2 py-0.5 rounded-md bg-[var(--color-surface)] text-[var(--color-text-secondary)] border border-[var(--color-border)]">Episodes &amp; Cast</span>
                       <span className="text-[10px] px-2 py-0.5 rounded-md bg-[var(--color-surface)] text-[var(--color-text-secondary)] border border-[var(--color-border)]">Local DB</span>
                     </div>
                   </div>

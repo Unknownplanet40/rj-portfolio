@@ -57,9 +57,9 @@ export function CapsStreamGallery({ previews }: CapsStreamGalleryProps) {
   if (!previews || previews.length === 0) return null;
 
   return (
-    <div className="flex flex-col gap-3 w-full mt-0 md:mt-2">
+    <div className="flex flex-col gap-3 w-full min-w-0 mt-0 md:mt-2">
       {/* Mockup Window Frame */}
-      <div className="rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-bg-secondary)] overflow-hidden shadow-sm">
+      <div className="rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-bg-secondary)] overflow-hidden shadow-sm min-w-0">
         {/* Window Chrome Header */}
         <div className="flex items-center justify-between px-3 py-2 border-b border-[var(--color-border)] bg-[var(--color-surface)]/80 text-xs">
           <div className="flex items-center gap-1.5" aria-hidden="true">
@@ -86,7 +86,7 @@ export function CapsStreamGallery({ previews }: CapsStreamGalleryProps) {
 
         {/* Active Screenshot Display */}
         <div
-          className="relative aspect-video w-full bg-neutral-950 overflow-hidden cursor-pointer group"
+          className="relative aspect-video w-full max-h-48 sm:max-h-none bg-neutral-950 overflow-hidden cursor-pointer group"
           onClick={() => setIsLightboxOpen(true)}
           role="button"
           tabIndex={0}

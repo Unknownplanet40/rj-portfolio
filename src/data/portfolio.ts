@@ -30,7 +30,7 @@ export const HERO = {
 export const ABOUT = {
   bio: [
     "Ryan James V. Capadocia is an entry-level IT professional passionate about technology, troubleshooting, and software development.",
-    "He graduated with a Bachelor of Science in Information Technology from Cavite State University – Imus Campus. His experience spans hardware troubleshooting, desktop assembly, LAN/WAN setup, CCTV installation, end-user support, and full-stack web application development.",
+    "He graduated with a Bachelor of Science in Information Technology from Cavite State University – Imus Campus. His experience spans hardware troubleshooting, desktop assembly, CCTV installation, end-user support, and full-stack web application development.",
     "His goal is to build reliable systems that solve real-world problems—combining technical depth with a practical, user-first mindset.",
   ],
   stats: [
@@ -141,7 +141,6 @@ export const SKILLS: Skill[] = [
   { name: "Active Directory", category: "it-support" },
   { name: "Printer Support", category: "it-support" },
   { name: "Network Troubleshooting", category: "it-support" },
-  { name: "LAN / WAN", category: "it-support" },
   { name: "CCTV Installation", category: "it-support" },
   { name: "Remote Support", category: "it-support" },
   { name: "Inventory Management", category: "it-support" },

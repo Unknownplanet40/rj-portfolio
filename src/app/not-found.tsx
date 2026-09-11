@@ -1,6 +1,9 @@
 // src/app/not-found.tsx
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
+
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 export const metadata: Metadata = {
   title: "404 — Page Not Found",
@@ -20,10 +23,23 @@ export default function NotFound() {
             404
           </span>
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="flex flex-col items-center gap-2">
-              <div className="w-12 h-12 rounded-[var(--radius-xl)] bg-[var(--color-accent)] flex items-center justify-center text-white font-bold text-xl">
-                RJ
-              </div>
+            <div className="relative w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center drop-shadow-md">
+              <Image
+                src={`${basePath}/logo/logo-transparent_dark.png`}
+                alt="Ryan James Logo"
+                width={80}
+                height={80}
+                priority
+                className="block dark:hidden object-contain w-full h-full"
+              />
+              <Image
+                src={`${basePath}/logo/logo-transparent_light.png`}
+                alt="Ryan James Logo"
+                width={80}
+                height={80}
+                priority
+                className="hidden dark:block object-contain w-full h-full"
+              />
             </div>
           </div>
         </div>

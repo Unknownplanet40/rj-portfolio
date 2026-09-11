@@ -70,8 +70,8 @@ export function Navbar() {
               }
             }}
             className="flex items-center gap-2.5 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] rounded-[var(--radius-md)]"
-            aria-label="Ryan James logo - Click to scroll to top or replay intro"
-            title="Click to go to top (or replay logo reveal)"
+            aria-label="Ryan James logo - Click to scroll to top"
+            title="Click to go to top"
           >
             <div className="relative w-8 h-8 flex items-center justify-center transition-transform group-hover:scale-105 shrink-0">
               <Image

@@ -34,7 +34,7 @@ export function ScrollAnimation({
         delay,
         ease: [0.21, 0.47, 0.32, 0.98] as [number, number, number, number],
       }}
-      className={cn(className)}
+      className={cn("w-full min-w-0", className)}
     >
       {children}
     </motion.div>
@@ -62,7 +62,7 @@ export function StaggerContainer({
         visible: { transition: { staggerChildren: staggerDelay } },
         hidden: {},
       }}
-      className={cn(className)}
+      className={cn("w-full min-w-0", className)}
     >
       {children}
     </motion.div>
