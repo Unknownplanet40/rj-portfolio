@@ -4,6 +4,21 @@ All notable changes to this project are documented here.
 
 ## [Unreleased]
 
+## [0.4.0] - 2026-09-13
+
+### Added
+- Fresh high-resolution WebP screenshots for CapsStream (home dashboard, movie catalog, details view, player, achievements, and watch stats) (21e7d9b)
+
+### Changed
+- Adjusted Contact section background to seamlessly continue the alternating section background gradient directly after GitHub Stats (21e7d9b)
+- point version.json at release v0.3.0 [skip ci] (0f335d8)
+
+### Removed
+- Removed the Active Focus (Currently Exploring) section from the homepage layout (21e7d9b)
+- Removed Exploring link from the main navigation bar and active scroll spy tracking (21e7d9b)
+- Removed Currently Exploring navigation action from the command palette (21e7d9b)
+
+
 ## [0.3.0] - 2026-09-11
 
 ### Added
