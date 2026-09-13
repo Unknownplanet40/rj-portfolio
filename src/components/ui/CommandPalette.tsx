@@ -16,7 +16,6 @@ import {
   Clock,
   GraduationCap,
   Award,
-  Sparkles,
 } from "lucide-react";
 import { Github } from "@/components/ui/Icons";
 import { useTheme } from "next-themes";
@@ -126,14 +125,6 @@ export function CommandPalette({ isOpen, onClose }: CommandPaletteProps) {
       category: "Navigation",
       icon: <Github size={16} />,
       action: () => scrollTo("github"),
-    },
-    {
-      id: "exploring",
-      label: "Currently Exploring",
-      description: "Building with AI & multi-model workflow",
-      category: "Navigation",
-      icon: <Sparkles size={16} />,
-      action: () => scrollTo("exploring"),
     },
     {
       id: "contact",

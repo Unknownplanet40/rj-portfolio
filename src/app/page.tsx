@@ -9,7 +9,6 @@ import { Projects } from "@/components/sections/Projects";
 import { GitHubStatsSection } from "@/components/sections/GitHubStats";
 import { Timeline } from "@/components/sections/Timeline";
 import { Contact } from "@/components/sections/Contact";
-import { CurrentlyExploring } from "@/components/sections/CurrentlyExploring";
 import { SectionDivider } from "@/components/ui/SectionDivider";
 import { fetchGitHubStats } from "@/lib/github";
 
@@ -36,9 +35,8 @@ export default async function HomePage() {
       <SectionDivider flip />
       <GitHubStatsSection stats={githubStats} />
       <SectionDivider flip />
-      <CurrentlyExploring />
-      <SectionDivider />
       <Contact />
     </>
   );
 }
+

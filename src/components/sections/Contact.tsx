@@ -67,7 +67,7 @@ export function Contact() {
   ];
 
   return (
-    <section id="contact" className="section bg-[var(--color-bg-secondary)]" aria-labelledby="contact-heading">
+    <section id="contact" className="section bg-[var(--color-bg)]" aria-labelledby="contact-heading">
       <div className="container">
         <ScrollAnimation className="flex flex-col gap-3 mb-12">
           <SectionLabel>Contact</SectionLabel>

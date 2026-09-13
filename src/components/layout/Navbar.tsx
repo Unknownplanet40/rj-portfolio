@@ -13,7 +13,7 @@ import { cn } from "@/lib/utils";
 import { NAV_LINKS } from "@/data/portfolio";
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
-const SECTION_IDS = ["about", "skills", "projects", "experience", "education", "certifications", "timeline", "github", "exploring", "contact"];
+const SECTION_IDS = ["about", "skills", "projects", "experience", "education", "certifications", "timeline", "github", "contact"];
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
